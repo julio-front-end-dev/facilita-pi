@@ -1,0 +1,10 @@
+# Configurações do Banco de Dados (Contém senhas)
+config.php
+
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Pastas de IDEs
+.vscode/
+.idea/
