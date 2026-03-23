@@ -1,39 +1,62 @@
-**README.md** formatado para o seu projeto. Ele é essencial para o controle de versão, pois explica para o seu grupo (ou para o seu professor) como rodar o sistema e qual a função ---
+Este documento destaca a arquitetura de segurança implementada e as instruções de configuração.
 
-# FACILITA! - Projeto Integrador (Grupo 18)
+# FACILITA! - Conectando Profissionais e Clientes
 
-O **Facilita!** é uma plataforma simples e eficiente para conectar prestadores de serviço a clientes locais. O sistema permite a busca pública de profissionais por categoria e uma área administrativa restrita para gestão de cadastros.
+O **FACILITA!** é uma plataforma web desenvolvida para simplificar a busca e o contato com prestadores de serviços locais. O sistema oferece uma interface pública de busca rápida e um painel administrativo restrito para a gestão segura da base de dados.
+
+## Funcionalidades
+
+* **Busca Pública:** Localização de profissionais por categoria/profissão.
+* **Integração com WhatsApp:** Botão direto que utiliza o protocolo `wa.me` para iniciar conversas com os profissionais.
+* **Painel Administrativo:** Área restrita com login para gerenciamento do sistema.
+* **Gestão de Cadastros:** Interface para adição e exclusão de profissionais cadastrados.
+* **Máscaras Dinâmicas:** Formatação automática de campos de telefone via JavaScript.
 
 ## Tecnologias Utilizadas
-* **PHP 8.x**: Lógica de backend e conexão com banco de dados.
-* **MySQL**: Armazenamento de dados de usuários e profissionais.
-* **Bootstrap 5**: Interface responsiva e moderna.
-* **JavaScript**: Máscaras de entrada e manipulação de formulários.
-* **CSS3**: Estilização personalizada com backgrounds dinâmicos.
 
-## Estrutura do Projeto
-* `index.php`: Interface principal com abas de busca, login e cadastro.
-* `config.php`: Arquivo central de configuração, sessões e lógica de banco de dados (Protegido com Prepared Statements).
-* `script.js`: Funções de máscara de WhatsApp e limpeza de campos.
-* `style.css`: Definições visuais e layout flexível.
-* `.gitignore`: Impede que arquivos de configuração sensíveis sejam enviados ao repositório.
+* **Backend:** PHP 8.x.
+* **Banco de Dados:** MySQL.
+* **Segurança:** Utilização de *Prepared Statements* para mitigação de SQL Injection.
+* **Frontend:** Bootstrap 5 (Responsivo) e CSS3 com backgrounds dinâmicos.
+* **Scripts:** JavaScript Vanilla para manipulação de DOM e máscaras.
 
-## Como Instalar
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/facilita.git
-   ```
-2. **Configure o Banco de Dados:**
-   * Importe o banco de dados `facilita_db`.
-   * Crie as tabelas `usuarios` (id, usuario, senha) e `profissionais` (id, nome, profissao, cidade, whatsapp).
-3. **Configure o PHP:**
-   * Renomeie o arquivo `config.example.php` para `config.php`.
-   * Insira suas credenciais locais do MySQL (host, user, pass).
-4. **Acesse no navegador:**
-   * `http://localhost/facilita`
+## Estrutura de Arquivos
+
+* `index.php`: Interface principal com sistema de abas para Busca, Login e Cadastro.
+* `config.php`: Centraliza a conexão com o banco de dados e lógica de sessão (arquivo protegido).
+* `config.example.php`: Modelo de configuração para novos ambientes.
+* `database.sql`: Script de criação das tabelas `usuarios` e `profissionais`.
+* `script.js`: Funções de interface e limpeza de formulários ao carregar a página.
+* `style.css`: Estilização personalizada e layout flexível.
+* `.gitignore`: Filtro para impedir o envio de credenciais sensíveis ao Git[cite: 1].
+
+## Como Instalar e Rodar
+
+1.  **Clonar o Repositório:**
+    ```bash
+    git clone https://github.com/seu-usuario/facilita.git
+    ```
+
+2.  **Configurar o Banco de Dados:**
+    * Importe o arquivo `database.sql` no seu gerenciador MySQL (ex: phpMyAdmin).
+    * Isso criará o banco `facilita_db` e as tabelas necessárias.
+
+3.  **Configurar o Ambiente PHP:**
+    * Renomeie o arquivo `config.example.php` para `config.php`.
+    * Edite o `config.php` com as credenciais do seu servidor local (`host`, `user`, `pass`).
+
+4.  **Acessar o Sistema:**
+    * Certifique-se de que a pasta está no diretório do servidor (ex: `htdocs`).
+    * Acesse: `http://localhost/facilita`.
 
 ## Segurança Implementada
-O projeto utiliza **Prepared Statements** em todas as interações com o banco de dados para prevenir ataques de **SQL Injection**, garantindo a integridade dos dados e do acesso administrativo.
 
-**Univesp - 2026**
+O projeto prioriza a integridade dos dados através de:
+* **Prepared Statements:** Todas as consultas ao banco utilizam `prepare()` e `bind_param()` para evitar ataques de injeção de SQL.
+* **Gestão de Sessão:** Acesso às funções de cadastro e exclusão protegido por `session_start()`.
+* **Proteção de Credenciais:** Uso de `.gitignore` para o arquivo `config.php`[cite: 1].
+
+**Projeto Integrador | Grupo 18 | Univesp - 2026**
+
+
 
