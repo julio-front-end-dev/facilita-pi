@@ -1,49 +1,73 @@
-Este documento destaca a arquitetura de segurança implementada e as instruções de configuração.
+FACILITA! - Digitou, clicou, achou!
 
-FACILITA! - Conectando Profissionais e Clientes
-O FACILITA! é uma plataforma web desenvolvida para simplificar a busca e o contato com prestadores de serviços locais. O sistema oferece uma interface pública de busca rápida e um painel administrativo restrito para a gestão segura da base de dados.
+O FACILITA! é uma plataforma web simplificada desenvolvida para conectar prestadores de serviços (profissionais liberais, autônomos) a clientes de forma direta via WhatsApp. O sistema permite o cadastro de profissionais, busca por categoria e gerenciamento de perfis.
 
 Funcionalidades
-Busca Pública: Localização de profissionais por categoria/profissão.
-Integração com WhatsApp: Botão direto que utiliza o protocolo wa.me para iniciar conversas com os profissionais.
-Painel Administrativo: Área restrita com login para gerenciamento do sistema.
-Gestão de Cadastros: Interface para adição e exclusão de profissionais cadastrados.
-Máscaras Dinâmicas: Formatação automática de campos de telefone via JavaScript.
+
+Busca Inteligente: Filtre profissionais por área de atuação (ex: Eletricista, Encanador).
+Integração com WhatsApp: Botão direto para iniciar conversa com o profissional sem precisar salvar o número.
+Sistema de Login e Cadastro: Segurança para profissionais gerenciarem seus dados.
+Painel Administrativo (CRUD): Usuários logados podem editar ou excluir seus anúncios de serviço.
+Interface Responsiva: Desenvolvido com Bootstrap 5 para funcionar perfeitamente em celulares e computadores.
+
+
 Tecnologias Utilizadas
+
+Frontend: HTML5, CSS3 (Customizado), JavaScript (Máscaras de input).
+Framework CSS:** [Bootstrap 5](https://getbootstrap.com/).
 Backend: PHP 8.x.
-Banco de Dados: MySQL.
-Segurança: Utilização de Prepared Statements para mitigação de SQL Injection.
-Frontend: Bootstrap 5 (Responsivo) e CSS3 com backgrounds dinâmicos.
-Scripts: JavaScript Vanilla para manipulação de DOM e máscaras.
+Banco de Dados: MySQL/MariaDB.
+Segurança:* Criptografia de senhas com `password_hash` e proteção contra SQL Injection via `Prepared Statements`.
+
+
 Estrutura de Arquivos
-index.php: Interface principal com sistema de abas para Busca, Login e Cadastro.
-config.php: Centraliza a conexão com o banco de dados e lógica de sessão (arquivo protegido).
-config.example.php: Modelo de configuração para novos ambientes.
-database.sql: Script de criação das tabelas usuarios e profissionais.
-script.js: Funções de interface e limpeza de formulários ao carregar a página.
-style.css: Estilização personalizada e layout flexível.
-.gitignore: Filtro para impedir o envio de credenciais sensíveis ao Git[cite: 1].
+
+```text
+├── config.php          # Lógica principal (Conexão, Login, Cadastro, CRUD)
+├── config.example.php  # Modelo de configuração para novos ambientes
+├── index.php           # Interface principal do usuário
+├── database.sql        # Script de criação do banco de dados
+├── style.css           # Estilizações visuais e background dinâmico
+├── script.js           # Máscaras de telefone e comportamento do formulário
+└── .gitignore          # Proteção de arquivos sensíveis (ex: senhas)
+
+
+
 Como Instalar e Rodar
-Clonar o Repositório:
 
-git clone https://github.com/seu-usuario/facilita.git
-Configurar o Banco de Dados:
+1. Requisitos
+Você precisará de um servidor local como **XAMPP**, **WAMP** ou **Laragon** com PHP 7.4+ e MySQL.
 
-Importe o arquivo database.sql no seu gerenciador MySQL (ex: phpMyAdmin).
-Isso criará o banco facilita_db e as tabelas necessárias.
-Configurar o Ambiente PHP:
+2. Configurando o Banco de Dados
+1.  Abra o seu gerenciador de banco de dados (phpMyAdmin).
+2.  Crie um banco chamado `facilita_db`.
+3.  Importe o conteúdo do arquivo `database.sql` para criar as tabelas necessárias.
 
-Renomeie o arquivo config.example.php para config.php.
-Edite o config.php com as credenciais do seu servidor local (host, user, pass).
-Acessar o Sistema:
+3. Configurando o Projeto
+1.  Clone ou baixe este repositório para a pasta `htdocs` ou `www` do seu servidor.
+2.  Renomeie o arquivo `config.example.php` para `config.php`.
+3.  Edite o `config.php` com as suas credenciais locais:
+    php
+    $host = 'localhost';
+    $user = 'seu_usuario'; 
+    $pass = 'sua_senha';    
+    $db   = 'facilita_db';
+    
 
-Certifique-se de que a pasta está no diretório do servidor (ex: htdocs).
-Acesse: http://localhost/facilita.
-Segurança Implementada
-O projeto prioriza a integridade dos dados através de:
+4. Acesso
+Abra o navegador e digite: `http://localhost/nome-da-sua-pasta`
 
-Prepared Statements: Todas as consultas ao banco utilizam prepare() e bind_param() para evitar ataques de injeção de SQL.
-Gestão de Sessão: Acesso às funções de cadastro e exclusão protegido por session_start().
-Proteção de Credenciais: Uso de .gitignore para o arquivo config.php.
-Projeto Integrador | Grupo 18 | Univesp - 2026
+
+Segurança e Boas Práticas
+
+Senhas: Nunca são salvas em texto puro. O sistema utiliza o algoritmo `BCRYPT`.
+Proteção de Dados: O arquivo `config.php` está no `.gitignore` para evitar o vazamento de credenciais em repositórios públicos.
+Tratamento de Input: Todas as entradas de busca e cadastro passam por sanitização para evitar scripts maliciosos.
+
+Autor
+
+Desenvolvimento: DanieleJulio/GitHub
+Design: Bootstrap & Custom CSS
+
+
 
