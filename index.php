@@ -27,7 +27,7 @@
         <div class="tab-content">
             <div class="tab-pane fade show active" id="tab-busca">
                 <form action="index.php" method="GET" class="input-group mb-3">
-                    <input type="text" name="busca" class="form-control" placeholder="Ex: Eletricista, Encanador...">
+                    <input type="text" name="busca" class="form-control" placeholder="Digite uma profissão...">
                     <button class="btn btn-primary">Buscar</button>
                 </form>
                 
@@ -49,8 +49,8 @@
 
             <div class="tab-pane fade" id="tab-login">
                 <form action="config.php" method="POST" class="card p-4 shadow">
-                    <input type="text" name="login_whatsapp" class="form-control mb-2" placeholder="Seu WhatsApp" required>
-                    <input type="password" name="login_senha" class="form-control mb-3" placeholder="Sua Senha" required>
+                    <input type="text" name="login_whatsapp" class="form-control mb-2" placeholder="WhatsApp" required>
+                    <input type="password" name="login_senha" class="form-control mb-3" placeholder="Senha" required>
                     <button type="submit" name="btn_login" class="btn btn-primary w-100">Entrar</button>
                 </form>
             </div>
@@ -58,10 +58,10 @@
             <div class="tab-pane fade" id="tab-cadastro">
                 <form action="config.php" method="POST" class="card p-4 shadow">
                     <input type="text" name="novo_usuario" class="form-control mb-2" placeholder="Nome Completo" required>
-                    <input type="text" name="nova_profissao" class="form-control mb-2" placeholder="Sua Profissão" required>
-                    <input type="text" name="nova_cidade" class="form-control mb-2" placeholder="Sua Cidade" required>
+                    <input type="text" name="nova_profissao" class="form-control mb-2" placeholder="Profissão" required>
+                    <input type="text" name="nova_cidade" class="form-control mb-2" placeholder="Cidade/UF" required>
                     <input type="text" name="novo_whatsapp" class="form-control mb-2" onkeyup="maskWhatsApp(this)" placeholder="WhatsApp" required>
-                    <input type="password" name="nova_senha" class="form-control mb-3" placeholder="Crie uma senha" required>
+                    <input type="password" name="nova_senha" class="form-control mb-3" placeholder="Crie sua senha" required>
                     <button type="submit" name="btn_registrar" class="btn btn-success w-100">Cadastrar</button>
                 </form>
             </div>
@@ -93,6 +93,18 @@
         <?php endif; ?>
 
     </div>
+    </div> 
+
+    <footer class="footer mt-auto py-4 text-center">
+        <span class="text-white-50 shadow-sm">
+            2026 | Projeto Integrador | Grupo 18 | Univesp
+        </span>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
