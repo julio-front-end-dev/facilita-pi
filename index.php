@@ -15,17 +15,18 @@
         </header>
 
         <ul class="nav nav-pills nav-fill bg-dark p-1 rounded-4 mb-4">
-            <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-busca">Buscar</button></li>
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-busca">Encontrar Profissional</button></li>
             <?php if(isset($_SESSION['logado'])): ?>
                 <li class="nav-item"><a href="config.php?logout=1" class="nav-link text-danger">Sair</a></li>
             <?php else: ?>
-                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-login">Login</button></li>
-                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-cadastro">Cadastrar</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-login">Fazer Login</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-cadastro">Cadastre-se!</button></li>
             <?php endif; ?>
         </ul>
 
         <div class="tab-content">
             <div class="tab-pane fade show active" id="tab-busca">
+                
                 <form action="index.php" method="GET" class="input-group mb-3">
                     <input type="text" name="busca" class="form-control" placeholder="Digite uma profissão...">
                     <button class="btn btn-primary">Buscar</button>
@@ -94,6 +95,7 @@
 
     </div>
     </div> 
+    
 
     <footer class="footer mt-auto py-4 text-center">
         <span class="text-white-50 shadow-sm">
@@ -101,11 +103,10 @@
         </span>
     </footer>
 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-</html>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+
+ </html>
