@@ -119,12 +119,17 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>É uma plataforma web simplificada desenvolvida para conectar prestadores de serviços 
-                   (profissionais liberais e autônomos) a clientes de forma direta via WhatsApp.</p>
+                <p>Diferente de listas telefônicas antigas ou buscas genéricas na internet, 
+                    o Facilita foi desenhado para ser direto:</p>
                 <ul class="text-start">
-                    <li>Digite o nome da profissão e encontre-o em segundos.</li>
-                    <li>Fale com o profissional via WhatsApp com apenas um clique, sem precisar salvar nada.</li>
-                    <li>O profissional poderá fazer o seu cadastro e posteriormente, gerenciar seus dados e senha .</li>
+                    <li>Ao digitar a profissão (como "Eletricista" ou "Pintor") você visualiza instantaneamente 
+                        os profissionais disponíveis na sua região.</li>
+                    <li>Com um único clique, você abre uma conversa no WhatsApp do profissional, sem precisar 
+                        salvar o número na sua agenda de contatos.</li>
+                    <li>O profissional consegue criar o seu perfil em segundos e ficando visível para novos clientes,
+                        tendo total controle para editar ou excluir seus dados quando desejar. Para logar basta digitar 
+                        seu WhatsApp e a senha que criou ao realizar o cadastro.
+                    </li>
                 </ul>
                 </div>
             <div class="modal-footer border-secondary">
