@@ -12,6 +12,10 @@
         <header class="text-center text-white mb-4">
             <h1 class="display-3 fw-bold">FACILITA!</h1>
             <p class="lead">Digitou, clicou, achou!</p>
+            <div class="text-center mb-4">
+    <span class="text-white">Saiba mais sobre o Facilita!</span>
+    <a href="#" class="text-info fw-bold" data-bs-toggle="modal" data-bs-target="#modalSobre">Clique aqui!</a>
+</div>
         </header>
 
         <ul class="nav nav-pills nav-fill bg-dark p-1 rounded-4 mb-4">
@@ -99,13 +103,36 @@
 
     <footer class="footer mt-auto py-4 text-center">
         <span class="text-white-50 shadow-sm">
-            2026 | Projeto Integrador | Grupo 18 | Univesp
+            Projeto Integrador I | Eixo da Computação - Grupo 18 | Univesp
         </span>
     </footer>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <script src="script.js"></script>
+
+    <div class="modal fade" id="modalSobre" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title">Sobre o FACILITA!</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>É uma plataforma web simplificada desenvolvida para conectar prestadores de serviços 
+                   (profissionais liberais e autônomos) a clientes de forma direta via WhatsApp.</p>
+                <ul class="text-start">
+                    <li>Digite o nome da profissão e encontre-o em segundos.</li>
+                    <li>Fale com o profissional via WhatsApp com apenas um clique, sem precisar salvar nada.</li>
+                    <li>O profissional poderá fazer o seu cadastro e posteriormente, gerenciar seus dados e senha .</li>
+                </ul>
+                </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido!</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 
