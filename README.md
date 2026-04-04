@@ -1,5 +1,3 @@
-FACILITA! - Digitou, clicou, achou!
-
 FACILITA! é uma plataforma web simplificada desenvolvida para conectar prestadores de serviços 
 (profissionais liberais e autônomos) a clientes de forma direta via WhatsApp. Este projeto faz 
 parte do Projeto Integrador do Grupo 18 - Univesp.
@@ -93,8 +91,7 @@ Proteção de Dados: O arquivo `config.php` está no `.gitignore` para evitar o 
 em repositórios públicos.
 Tratamento de Input: Todas as entradas de busca e cadastro passam por sanitização para evitar scripts maliciosos.
 
-Autores
-Desenvolvimento: Daniel e Julio / GitHub
-Instituição: Univesp - Grupo 18.
+Desenvolvedores: Daniel e Julio 
+Eixo da Computação - Grupo 18 - Univesp
 
 
