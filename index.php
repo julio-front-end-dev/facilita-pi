@@ -12,11 +12,7 @@
         <header class="text-center text-white mb-4">
             <h1 class="display-3 fw-bold">FACILITA!</h1>
             <p class="lead">Digitou, clicou, achou!</p>
-            <div class="text-center mb-4">
-    <span class="text-white">Saiba mais sobre o Facilita!</span>
-    <a href="#" class="text-info fw-bold" data-bs-toggle="modal" data-bs-target="#modalSobre">Clique aqui!</a>
-</div>
-        </header>
+       </header>
 
         <ul class="nav nav-pills nav-fill bg-dark p-1 rounded-4 mb-4">
             <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-busca">Encontrar Profissional</button></li>
@@ -98,8 +94,12 @@
         <?php endif; ?>
 
     </div>
-    </div> 
+    </div>
     
+    <div class="text-center mb-4">
+    <span class="text-white">Saiba mais sobre o Facilita!</span>
+    <a href="#" class="text-info fw-bold" data-bs-toggle="modal" data-bs-target="#modalSobre">Clique aqui!</a>
+</div>
 
     <footer class="footer mt-auto py-4 text-center">
         <span class="text-white-50 shadow-sm">
@@ -122,8 +122,8 @@
                 <p>Diferente de listas telefônicas antigas ou buscas genéricas na internet, 
                     o Facilita foi desenhado para ser direto:</p>
                 <ul class="text-start">
-                    <li>Ao digitar a profissão (como "Eletricista" ou "Pintor") você visualiza instantaneamente 
-                        os profissionais disponíveis na sua região.</li>
+                    <li>Ao digitar a profissão (como "Eletrecista" ou "Pintor") você visualiza instantaneamente 
+                        dados relevantes dos profissionais disponíveis na sua região.</li>
                     <li>Com um único clique, você abre uma conversa no WhatsApp do profissional, sem precisar 
                         salvar o número na sua agenda de contatos.</li>
                     <li>O profissional consegue criar o seu perfil em segundos e ficando visível para novos clientes,
