@@ -126,9 +126,9 @@
                         dados relevantes dos profissionais disponíveis na sua região.</li>
                     <li>Com um único clique, você abre uma conversa no WhatsApp do profissional, sem precisar 
                         salvar o número na sua agenda de contatos.</li>
-                    <li>O profissional consegue criar o seu perfil em segundos e ficando visível para novos clientes,
-                        tendo total controle para editar ou excluir seus dados quando desejar. Para logar basta digitar 
-                        seu WhatsApp e a senha que criou ao realizar o cadastro.
+                    <li>O profissional consegue criar o seu perfil em segundos, ficando visível para novos clientes 
+                        e tendo total controle para editar ou excluir seus dados quando desejar. 
+                        Para logar basta digitar o seu WhatsApp e a senha que criou ao realizar o cadastro.
                     </li>
                 </ul>
                 </div>
