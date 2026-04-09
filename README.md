@@ -96,6 +96,6 @@ Proteção de Dados: O arquivo `config.php` está no `.gitignore` para evitar o 
 em repositórios públicos.
 Tratamento de Input: Todas as entradas de busca e cadastro passam por sanitização para evitar scripts maliciosos.
 
-Desenvolvedores: Daniel e Julio / Eixo da Computação - Grupo 18 - Univesp
+Desenvolvedores: Daniel, Julio e Gabriel / Eixo da Computação - Grupo 18 - Univesp
 
 
