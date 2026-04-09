@@ -1,4 +1,15 @@
-<?php include('config.php'); ?>
+<?php 
+include('config.php'); 
+
+// 1. Define o termo de busca (se houver um na URL, senão busca tudo)
+$busca = isset($_GET['busca']) ? "%" . $_GET['busca'] . "%" : "%";
+
+// 2. Executa a busca diretamente para garantir que $resultados sempre exista
+$stmt = $conn->prepare("SELECT * FROM profissionais WHERE profissao LIKE ? OR nome LIKE ?");
+$stmt->bind_param("ss", $busca, $busca);
+$stmt->execute();
+$resultados = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
