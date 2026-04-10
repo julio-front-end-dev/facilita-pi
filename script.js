@@ -19,3 +19,17 @@ window.onload = function() {
         campoBusca.value = '';
     }
 };
+
+// Remove os parâmetros da URL assim que a página carrega
+if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.pathname);
+}
+
+// ... suas outras funções (maskWhatsApp, window.onload, etc)
+
+// Adicione no final:
+if (window.history.replaceState) {
+    setTimeout(() => {
+        window.history.replaceState(null, null, window.location.pathname);
+    }, 500); 
+}
