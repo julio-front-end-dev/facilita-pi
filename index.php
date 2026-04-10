@@ -60,12 +60,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                         <small><?php echo htmlspecialchars($p['profissao']); ?> - <?php echo htmlspecialchars($p['cidade']); ?></small>
                         <a href="https://wa.me/55<?php echo $p['whatsapp']; ?>" class="btn btn-success btn-sm mt-2">WhatsApp</a>
                         
-                        <?php if (isset($_GET['erro']) && $_GET['erro'] == 'whatsapp_duplicado'): ?>
-    <div class="alert alert-danger alert-dismissible fade show container mt-3" role="alert">
-        <strong>Erro:</strong> Este número de WhatsApp já está cadastrado!
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-<?php endif; ?> 
+      
                         <?php if(isset($_SESSION['logado'])): ?>
                             <div class="mt-2 border-top pt-2">
                                 <a href="index.php?editar=<?php echo $p['id']; ?>" class="text-primary small me-3 text-decoration-none fw-bold">Editar</a>
