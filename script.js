@@ -24,12 +24,3 @@ window.onload = function() {
 if (window.history.replaceState) {
     window.history.replaceState(null, null, window.location.pathname);
 }
-
-// ... suas outras funções (maskWhatsApp, window.onload, etc)
-
-// Adicione no final:
-if (window.history.replaceState) {
-    setTimeout(() => {
-        window.history.replaceState(null, null, window.location.pathname);
-    }, 500); 
-}
